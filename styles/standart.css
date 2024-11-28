@@ -38,6 +38,7 @@ footer {
 }
 
 h1 {
+    font-family: "Jaro", sans-serif;
     font-size: clamp(1rem, 2vw, 3rem);
 }
 

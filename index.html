@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/icons/favicon-96x96.png" sizes="96x96" />
     <script src="./script.js"></script>
     <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
@@ -10,18 +11,42 @@
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/chart.css">
     <link rel="stylesheet" href="./styles/standart.css">
-
+    <link rel="stylesheet" href="./styles/fonts.css">
     <title>Bookstore</title>
 </head>
-<body>
+<body onload="">
     <header>
-        <h1>Bookstore</h1>
+        <div class="header">
+            <div class="header_content">
+                <img src="./img/images/book-2022461_640.png" alt="Buch">
+                <h1>Bookstore</h1>  
+            </div>
+            <p class="header_line"></p>
+        </div>
     </header>
-    <main>
-        div mit js template über for schleife aus array
-    </main>
-    <footer>
-        impressum dies das 
-    </footer>
+
+    <section class="section">
+        <div onclick="closeOverlay()" id="overlay_add_note" class="overlay_add_note d_none">
+        </div>
+        <div onclick="closeOverlay()" id="overlay_show_trash" class="overlay_show_trash d_none">
+        </div>
+        
+        <h2>Notes</h2>
+        <div id="content" class="notebox">
+
+        </div>
+        <h2>archiv</h2>
+        <div id="archiv_content" class="notebox">
+
+        </div>
+        <h2>trash</h2>
+        <div id="trash_content" class="notebox">
+
+        </div>
+</section>
+
+<footer>
+    hier könnte ihre Werbung stehen!
+</footer>
 </body>
 </html>
