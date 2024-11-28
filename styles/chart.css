@@ -1,4 +1,4 @@
-.note{
+.bookchart{
     height: 150px;
     width: clamp(100px, 20vw, 400px);
     background-color: rgb(39,39,40);
@@ -12,13 +12,13 @@
 
 }
 
-.note > h3,.note > p{
+.bookchart > h3,.note > p{
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.note > div{
+.bookchart > div{
     display: flex;
     justify-content: space-between;
     width: 100%;
