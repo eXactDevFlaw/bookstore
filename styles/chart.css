@@ -1,26 +1,55 @@
 .bookchart{
-    height: 150px;
-    width: clamp(100px, 20vw, 400px);
-    background-color: rgb(39,39,40);
+    width: clamp(200px, 20vw, 500px);
+    background-color: rgb(8, 32, 41);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 8px;
     border-radius: 8px;
-
+    border-bottom: 1px solid white;
 }
 
-.bookchart > h3,.note > p{
+.bookchart_headline{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+}   
+
+.bookchart_img{
+    margin-top: 8px;
+    width:  clamp(8px, 10vw, 84px);
+    height: clamp(8px, 10vw, 84px);
 }
 
-.bookchart > div{
+.bookchart_info{
+    width: 100%;
+    margin-top: 8px;
+}
+
+.bookchart_price_likes{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+    border-top: 1px solid white;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+
 }
 
+.bookchart_likes{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.bookchart_button{
+    width:  clamp(16px, 10vw, 24px);
+    height: clamp(16px, 10vw, 24px);
+}
