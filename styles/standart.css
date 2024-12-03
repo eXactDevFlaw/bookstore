@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Figtree", sans-serif;
-  font-size: clamp(10px, 2vw, 16px);
+  font-size: clamp(10px, 1vw, 16px);
   box-sizing: border-box;
 }
 

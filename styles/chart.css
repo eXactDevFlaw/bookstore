@@ -27,28 +27,43 @@
 }
 
 .bookchart_info{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-top: 8px;
 }
 
 .bookchart_price_likes{
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     padding-top: 8px;
     border-top: 1px solid white;
     display: flex;
     align-items: center;
+}
 
+.bookchart_price{
+    flex: 1;
+   margin: 0;
+   color: rgb(192, 0, 0);
 }
 
 .bookchart_likes{
+    flex: 1;
     display: flex;
     align-items: center;
-    gap: 8px;
+
 }
 
 .bookchart_button{
     width:  clamp(16px, 10vw, 24px);
     height: clamp(16px, 10vw, 24px);
+}
+
+.bookchart_button:hover{
+    cursor: pointer;
+}
+
+.bookchart_table {
+    margin: 0;
 }
 

@@ -1,7 +1,7 @@
 .chart{
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px;
     padding: 8px;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .header_content{
-    width: clamp(100px, 75vw, 800px);
+    width: clamp(100px, 75vw, 1440px);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,7 +27,7 @@
 
 .header_line {
     border: solid white 0.3px;
-    width: clamp(100px, 75vw, 800px);
+    width: clamp(100px, 75vw, 1440px);
     margin-top: 25px;
 }
 
