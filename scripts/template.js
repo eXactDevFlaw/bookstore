@@ -17,16 +17,56 @@ function getBookTemplate(indexBook){
           src="./img/icons/like.png"
           alt=""
         /></div>
-      </div>
-      <div id="bookchart_author"><h3>Author:</h3>${books[indexBook].author}</div>
-      <div id="bookchart_publish_year"><h3>Erscheinungsjahr:</h3>${books[indexBook].publishedYear}</div>
-      <div id="bookchart_genre"><h3>Genre:</h3>${books[indexBook].genre}</div>
-    </div>
+      </div><table class="tg"><thead>
+      <tr>
+        <th class="tg-0pky">${books[indexBook].price} €</th>
+        <th class="tg-dvpl" colspan="2">
+        <p>${books[indexBook].likes}</p>
+        <img
+          id="bookchart_button"
+          class="bookchart_button"
+          onclick="function_counter_imgchange"
+          src="./img/icons/like.png"
+          alt=""
+        /></th>
+      </tr></thead>
+    <tbody>
+      <tr>
+        <td class="tg-0pky">Author</td>
+        <td class="tg-0pky">:</td>
+        <td class="tg-0pky">${books[indexBook].author}</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Erischeinungsjahr</td>
+        <td class="tg-0pky">:</td>
+        <td class="tg-0pky">${books[indexBook].publishedYear}</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Genre</td>
+        <td class="tg-0pky">:</td>
+        <td class="tg-0pky">${books[indexBook].genre}</td>
+      </tr>
+    </tbody>
+    </table>
     <div id="bookchart_coments">
         <h3>Kommentare:</h3>
         <div id="bookchart_coments_pull">${books[indexBook].comments[1]}</div>
+        <tr>
+        <td class="tg-0pky">Erischeinungsjahr</td>
+        <td class="tg-0pky">:</td>
+        <td class="tg-0pky">${books[indexBook].publishedYear}</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Genre</td>
+        <td class="tg-0pky">:</td>
+        <td class="tg-0pky">${books[indexBook].genre}</td>
+      </tr>
         <input type="text">
     </div>
   </div>
     `;
+}
+
+function getCommentsTempalte(indexBook){
+  
 }

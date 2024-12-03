@@ -37,19 +37,18 @@
     padding-top: 8px;
     border-top: 1px solid white;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
 }
 
 .bookchart_likes{
-    width: 50%;
     display: flex;
-    justify-content: right;
     align-items: center;
+    gap: 8px;
 }
 
 .bookchart_button{
     width:  clamp(16px, 10vw, 24px);
     height: clamp(16px, 10vw, 24px);
 }
+
