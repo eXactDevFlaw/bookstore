@@ -1,8 +1,8 @@
-function getBookTemplate(indexBook) {
+function getBookTemplate(book) {
   return /*html*/ `
     <div class="bookchart">
       <div class="bookchart_headline">
-      <h3>${books[indexBook].name}</h3>
+      <h3>${book.name}</h3>
       </div>
       <div id="bookchart_img">
       <img class="bookchart_img" src="./img/images/open-book-5218061_640.png">
@@ -10,10 +10,10 @@ function getBookTemplate(indexBook) {
       <div id="bookchart_info" class="bookchart_info">
         <div class="bookchart_price_likes">
           <div class="bookchart_price">
-            ${books[indexBook].price} €
+            ${book.price} €
           </div>
           <div class="bookchart_likes">
-            <p>${books[indexBook].likes}</p>
+            <p>${book.likes}</p>
             <img
               id="bookchart_button"
               class="bookchart_button"
@@ -24,27 +24,39 @@ function getBookTemplate(indexBook) {
         </div>   
           <table class="bookchart_table">
             <tbody>
-              <tr>
-                <td>Author</td>
+              <tr class="flex_1">
+                <td class="flex_2">Author</td>
                 <td>:</td>
-                <td>${books[indexBook].author}</td>
+                <td class="flex_2">${book.author}</td>
               </tr>
-              <tr>
-                <td>Erischeinungsjahr</td>
+              <tr class="flex_1">
+                <td class="flex_2">Erischeinungsjahr</td>
                 <td>:</td>
-                <td>${books[indexBook].publishedYear}</td>
+                <td class="flex_2">${book.publishedYear}</td>
               </tr>
-              <tr>
-                <td>Genre</td>
+              <tr class="flex_1">
+                <td class="flex_2">Genre</td>
                 <td>:</td>
-                <td>${books[indexBook].genre}</td>
+                <td class="flex_2">${book.genre}</td>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div id="bookchart_comments" class="bookchart_comments">
+          <h3>Kommentare:</h3>
+          <table class="bookchart_table">
+          <tbody>
+            ${book.comments.map(comment => `
+              <tr class="flex_1">
+                <td class="flex_2">${comment.name}</td>
+                <td>:</td>
+                <td class="flex_3">${comment.comment}</td>
+              </tr>
+          `).join('')}
+        </tbody>
+        </table>
         </div>  
       </div>
     </div>
     `;
 }
-
-function getCommentsTempalte(indexBook) {}
