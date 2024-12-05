@@ -44,17 +44,19 @@ function getBookTemplate(book) {
         </div>
         <div id="bookchart_comments" class="bookchart_comments">
           <h3>Kommentare:</h3>
-          <table class="bookchart_table">
-          <tbody>
-            ${book.comments.map(comment => `
-              <tr class="flex_1">
-                <td class="flex_2">${comment.name}</td>
-                <td>:</td>
-                <td class="flex_3">${comment.comment}</td>
-              </tr>
-          `).join('')}
-        </tbody>
-        </table>
+          <div class="bookchart_table">
+            <table>
+            <tbody>
+              ${book.comments.map(comment => `
+                <tr class="flex_1">
+                  <td class="flex_2">${comment.name}</td>
+                  <td>:</td>
+                  <td class="flex_3">${comment.comment}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+            </table>
+          </div>
         </div>  
       </div>
     </div>

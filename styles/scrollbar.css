@@ -1,27 +1,15 @@
-body {
-    --sb-track-color: #232E33;
-    --sb-thumb-color: #6baf8d;
-    --sb-size: 4px;
+  .bookchart_table::-webkit-scrollbar {
+    width: 4px;
   }
   
-  body::-webkit-scrollbar {
-    width: var(--sb-size)
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
+  .bookchart_table::-webkit-scrollbar-track {
+    background: rgb(8, 32, 41);
+    box-shadow: inset 0 0 4px grey; 
     border-radius: 33px;
   }
   
-  body::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
+  .bookchart_table::-webkit-scrollbar-thumb {
+    background: rgb(5, 23, 30);
     border-radius: 33px;
     
-  }
-  
-  @supports not selector(::-webkit-scrollbar) {
-    body {
-      scrollbar-color: var(--sb-thumb-color)
-                       var(--sb-track-color);
-    }
   }
