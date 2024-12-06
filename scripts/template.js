@@ -1,4 +1,4 @@
-function getBookTemplate(book) {
+function getBookTemplate(book, index) {
   return /*html*/ `
     <div class="bookchart">
       <div class="bookchart_headline">
@@ -9,15 +9,15 @@ function getBookTemplate(book) {
       </div>
       <div id="bookchart_info" class="bookchart_info">
         <div class="bookchart_price_likes">
-          <div class="bookchart_price">
-            ${book.price} €
+          <div id="bookchart_price" class="bookchart_price">
+          ${renderPrice(book.price)}
           </div>
-          <div class="bookchart_likes">
+          <div id="bookchart_likes" class="bookchart_likes">
             <p>${book.likes}</p>
             <img
               id="bookchart_button"
               class="bookchart_button"
-              onclick="function_counter_imgchange"
+              onclick="toggleLike(${index})"
               src="./img/icons/like.png"
               alt=""/>
           </div>
@@ -57,6 +57,10 @@ function getBookTemplate(book) {
             </tbody>
             </table>
           </div>
+        </div>
+        <div id="comment_input_section" class="comment_input_section">
+          <input type="text">
+          <img src="./img/icons/flat-2126882.svg" onclick="functionAddComment">
         </div>  
       </div>
     </div>

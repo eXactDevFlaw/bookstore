@@ -1,4 +1,4 @@
-.bookchart{
+.bookchart {
     width: clamp(200px, 20vw, 500px);
     background-color: rgb(8, 32, 41);
     color: white;
@@ -11,29 +11,29 @@
     border-bottom: 1px solid white;
 }
 
-.bookchart_headline{
+.bookchart_headline {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding-bottom: 8px;
     border-bottom: 1px solid white;
-}   
+}
 
-.bookchart_img{
+.bookchart_img {
     margin-top: 8px;
-    width:  clamp(8px, 10vw, 84px);
+    width: clamp(8px, 10vw, 84px);
     height: clamp(8px, 10vw, 84px);
 }
 
-.bookchart_info{
+.bookchart_info {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 8px;
 }
 
-.bookchart_price_likes{
+.bookchart_price_likes {
     width: 100%;
     padding-top: 8px;
     border-top: 1px solid white;
@@ -41,25 +41,25 @@
     align-items: center;
 }
 
-.bookchart_price{
+.bookchart_price {
     flex: 1;
-   margin: 0;
-   color: rgb(192, 0, 0);
+    margin: 0;
+    color: rgb(192, 0, 0);
 }
 
-.bookchart_likes{
+.bookchart_likes {
     flex: 1;
     display: flex;
     align-items: center;
 
 }
 
-.bookchart_button{
-    width:  clamp(16px, 10vw, 24px);
+.bookchart_button {
+    width: clamp(16px, 10vw, 24px);
     height: clamp(16px, 10vw, 24px);
 }
 
-.bookchart_button:hover{
+.bookchart_button:hover {
     cursor: pointer;
 }
 
@@ -68,22 +68,22 @@
     overflow: auto;
 }
 
-.flex_1{
+.flex_1 {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-.flex_2{
+.flex_2 {
     flex: 1;
     white-space: nowrap;
 }
 
-.flex_3{
+.flex_3 {
     flex: 1;
 }
 
-.bookchart_comments{
+.bookchart_comments {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -94,4 +94,36 @@
 
 .bookchart_comments h3 {
     margin: 8px 0 0 0;
+}
+
+.comment_input_section {
+    border-top: 1px solid white;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.comment_input_section input[type=text] {
+    margin-top: 8px;
+    flex: 1;
+    background-color: rgb(8, 32, 41);
+    border: 1px solid white;
+    box-shadow: none;
+    width: 20%;
+    color: white;
+    font-family: "Figtree", sans-serif;
+    font-size: clamp(10px, 1vw, 16px);
+    border-radius: 10px;
+    outline: none !important;
+}
+
+.comment_input_section img {
+    margin-top: 8px;
+    width: clamp(16px, 10vw, 24px);
+    height: clamp(16px, 10vw, 24px)
+}
+
+.comment_input_section img:hover {
+    cursor: pointer;
 }
