@@ -1,8 +1,13 @@
 function init(){
-    // getFromLocalStorage();
+    getFromLocalStorage();
     renderBooks();
 }
 
+function pushDBtoLocalStorage(){
+    if(!localStorage.getItem("books")){
+        localStorage.setItem("books", JSON.stringify(books));
+    }
+}
 
 function renderBooks(){
     let contentRef = document.getElementById('content');
@@ -23,6 +28,44 @@ function renderPrice(price) {
 }
 
 function toggleLike(index){
-    books[index].likes++;
+    let bookIndex = books[index];
+    let likeButtonIcon = "";
+
+    if (!bookIndex.liked){
+        likeButtonIcon = "./img/icons/heart.png";
+        bookIndex.likes++;
+        bookIndex.liked = true;
+    }else{
+        likeButtonIcon = "./img/icons/like.png";
+        bookIndex.likes--;
+        bookIndex.liked = false;
+    }
+    localStorage.setItem(`like_status_${index}`, bookIndex.liked);
     renderBooks();
+}
+
+function getFromLocalStorage() {
+    books.forEach((book, index) => {
+        let likeStatus = localStorage.getItem(`like_status_${index}`);
+        book.liked = likeStatus === "true";
+
+        let savedComments = localStorage.getItem(`book_comments_${index}`);
+        book.comments = savedComments ? JSON.parse(savedComments) : [];
+    } ) 
+}
+
+function saveComments(index) {
+    localStorage.setItem(`book_comments_${index}`, JSON.stringify(books[index].comments));
+}
+
+function addComment(index) {
+    const commentInput = document.getElementById(`comment_input_${index}`);
+    const commentText = commentInput.value.trim();
+
+    if (commentText) {
+        books[index].comments.push(commentText); // Add comment to the array
+        renderBooks(); // Re-render to display the new comment
+    }
+
+    commentInput.value = ""; // Clear the input field
 }

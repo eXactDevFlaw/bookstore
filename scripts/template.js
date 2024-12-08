@@ -18,8 +18,8 @@ function getBookTemplate(book, index) {
               id="bookchart_button"
               class="bookchart_button"
               onclick="toggleLike(${index})"
-              src="./img/icons/like.png"
-              alt=""/>
+              src="${book.liked ? './img/icons/heart.png' : './img/icons/like.png'}"
+              alt="Like button"/>
           </div>
         </div>   
           <table class="bookchart_table">
@@ -58,9 +58,9 @@ function getBookTemplate(book, index) {
             </table>
           </div>
         </div>
-        <div id="comment_input_section" class="comment_input_section">
-          <input type="text">
-          <img src="./img/icons/flat-2126882.svg" onclick="functionAddComment">
+        <div id="comment_input_section_${index}" class="comment_input_section">
+          <input type="text" id="comment_input_section_${index}">
+          <img src="./img/icons/flat-2126882.svg" onclick="addComment(${index})">
         </div>  
       </div>
     </div>
