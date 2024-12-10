@@ -48,24 +48,5 @@ function getFromLocalStorage() {
     books.forEach((book, index) => {
         let likeStatus = localStorage.getItem(`like_status_${index}`);
         book.liked = likeStatus === "true";
-
-        let savedComments = localStorage.getItem(`book_comments_${index}`);
-        book.comments = savedComments ? JSON.parse(savedComments) : [];
     } ) 
-}
-
-function saveComments(index) {
-    localStorage.setItem(`book_comments_${index}`, JSON.stringify(books[index].comments));
-}
-
-function addComment(index) {
-    const commentInput = document.getElementById(`comment_input_${index}`);
-    const commentText = commentInput.value.trim();
-
-    if (commentText) {
-        books[index].comments.push(commentText); // Add comment to the array
-        renderBooks(); // Re-render to display the new comment
-    }
-
-    commentInput.value = ""; // Clear the input field
 }
