@@ -3,12 +3,6 @@ function init(){
     renderBooks();
 }
 
-function pushDBtoLocalStorage(){
-    if(!localStorage.getItem("books")){
-        localStorage.setItem("books", JSON.stringify(books));
-    }
-}
-
 function renderBooks(){
     let contentRef = document.getElementById('content');
     contentRef.innerHTML = "";
