@@ -42,9 +42,10 @@ function getFromLocalStorage() {
     books.forEach((book, index) => {
         let likeStatus = localStorage.getItem(`like_status_${index}`);
         book.liked = likeStatus === "true";
+        let comments = localStorage.getItem(`comment`)
     } ) 
 }
 
 function addComment(){
-    
+    let comments = 
 }
