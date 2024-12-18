@@ -44,3 +44,7 @@ function getFromLocalStorage() {
         book.liked = likeStatus === "true";
     } ) 
 }
+
+function addComment(){
+    
+}
