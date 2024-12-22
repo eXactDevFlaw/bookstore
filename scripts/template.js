@@ -59,9 +59,9 @@ function getBookTemplate(book, index) {
           </div>
         </div>
         <div id="comment_input_section_${index}" class="comment_input_section">
-          <input type="text" id="comment_input_section_${index}">
-          <img src="./img/icons/flat-2126882.svg" onclick="addComment(${index})">
-        </div>  
+        <input type="text" id="comment_input_${index}">
+        <img src="./img/icons/flat-2126882.svg" onclick="addComment(${index})">
+      </div> 
       </div>
     </div>
     `;
